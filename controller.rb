@@ -3,6 +3,10 @@ require('sinatra/contrib/all')
 require_relative('./models/rock_scissor_paper')
 require('json')
 
+configure do
+  set :hands, ["scissors", "rock", "paper"]
+end
+
 get '/' do
   erb(:home)
 end 
